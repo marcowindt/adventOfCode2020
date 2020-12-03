@@ -1,7 +1,9 @@
+import os
 
-if __name__ == "__main__":
+
+def solution():
     passwords = []
-    with open('input.txt', 'r') as fd:
+    with open(os.path.join(os.path.dirname(__file__), './input.txt'), 'r') as fd:
         for line in fd:
             record = line.split("\n")[0]
             cols = record.split(" ")
@@ -23,8 +25,14 @@ if __name__ == "__main__":
     # PART TWO
     cnt = 0
     for password_details in passwords:
-        if password_details["chars"][password_details["min"] - 1] == password_details["char"] and password_details["chars"][password_details["max"] - 1] != password_details["char"]:
+        if password_details["chars"][password_details["min"] - 1] == password_details["char"] and \
+                password_details["chars"][password_details["max"] - 1] != password_details["char"]:
             cnt += 1
-        elif password_details["chars"][password_details["min"] - 1] != password_details["char"] and password_details["chars"][password_details["max"] - 1] == password_details["char"]:
+        elif password_details["chars"][password_details["min"] - 1] != password_details["char"] and \
+                password_details["chars"][password_details["max"] - 1] == password_details["char"]:
             cnt += 1
     print("2: cnt:", cnt)
+
+
+if __name__ == "__main__":
+    solution()

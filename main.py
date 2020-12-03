@@ -1,16 +1,11 @@
-# This is a sample Python script.
+import day1.main as day1
+import day2.main as day2
+import day3.main as day3
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print("DAY 1")
+    day1.solution()
+    print("DAY 2")
+    day2.solution()
+    print("DAY 3")
+    day3.solution()
