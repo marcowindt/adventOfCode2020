@@ -3,6 +3,7 @@ import day2.main as day2
 import day3.main as day3
 import day4.main as day4
 import day5.main as day5
+import day6.main as day6
 
 if __name__ == '__main__':
     print("DAY 1")
@@ -15,3 +16,5 @@ if __name__ == '__main__':
     day4.solution()
     print("DAY 5")
     day5.solution()
+    print("DAY 6")
+    day6.solution()
