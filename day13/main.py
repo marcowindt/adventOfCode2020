@@ -1,5 +1,5 @@
 import os
-from math import ceil, gcd
+from math import ceil, gcd, lcm
 
 TEST_IDS = """939
 7,13,x,x,59,x,31,19"""
@@ -18,10 +18,6 @@ TEST_EXTRA_4 = """0
 
 TEST_EXTRA_5 = """0
 1789,37,47,1889"""
-
-
-def lcm(a: int, b: int):
-    return abs(a*b) // gcd(a, b)
 
 
 def correct_timestamp(buses: list, timestamp: int) -> bool:
@@ -59,9 +55,7 @@ def solution():
     # x = sum(b_i * big_n_i * x_i) % big_n
 
     # Product of all moduli == product(all_bus_ids)
-    big_n = buses[0][1]
-    for i, bus in buses:
-        big_n = lcm(big_n, bus)
+    big_n = lcm(*[bus for i, bus in buses])
 
     # Calculate all big_n_i
     big_n_i_s = [big_n // n_i for i, n_i in buses]
