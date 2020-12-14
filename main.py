@@ -11,6 +11,7 @@ import day10.main as day10
 import day11.main as day11
 import day12.main as day12
 import day13.main as day13
+import day14.main as day14
 
 if __name__ == '__main__':
     print("🎄 Advent of Code 2020 🎄")
@@ -40,3 +41,5 @@ if __name__ == '__main__':
     day12.solution()
     print("DAY 13")
     day13.solution()
+    print("DAY 14")
+    day14.solution()
