@@ -1,3 +1,5 @@
+import timeit
+
 import day1.main as day1
 import day2.main as day2
 import day3.main as day3
@@ -16,33 +18,7 @@ import day15.main as day15
 
 if __name__ == '__main__':
     print("🎄 Advent of Code 2020 🎄")
-    print("DAY 1")
-    day1.solution()
-    print("DAY 2")
-    day2.solution()
-    print("DAY 3")
-    day3.solution()
-    print("DAY 4")
-    day4.solution()
-    print("DAY 5")
-    day5.solution()
-    print("DAY 6")
-    day6.solution()
-    print("DAY 7")
-    day7.solution()
-    print("DAY 8")
-    day8.solution()
-    print("DAY 9")
-    day9.solution()
-    print("DAY 10")
-    day10.solution()
-    print("DAY 11")
-    day11.solution()
-    print("DAY 12")
-    day12.solution()
-    print("DAY 13")
-    day13.solution()
-    print("DAY 14")
-    day14.solution()
-    print("DAY 15")
-    day15.solution()
+    for i in range(1, 16):
+        print("=== DAY {} ===".format(i))
+        print("{} secs".format(
+            timeit.timeit("day{}.solution()".format(i), setup="from __main__ import day{}".format(i), number=1)))
