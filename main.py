@@ -15,10 +15,11 @@ import day12.main as day12
 import day13.main as day13
 import day14.main as day14
 import day15.main as day15
+import day16.main as day16
 
 if __name__ == '__main__':
     print("🎄 Advent of Code 2020 🎄")
-    for i in range(1, 16):
+    for i in range(1, 17):
         print("=== DAY {} ===".format(i))
         print("{} secs".format(
             timeit.timeit("day{}.solution()".format(i), setup="from __main__ import day{}".format(i), number=1)))
