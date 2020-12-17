@@ -54,7 +54,7 @@ def solution():
     # cubes = TEST_CUBES
     with open(os.path.join(os.path.dirname(__file__), './input.txt'), 'r') as fd:
         cubes = fd.read()
-    cubes = [[c for c in cube] for cube in cubes.splitlines()]
+    cubes = cubes.splitlines()
 
     # PART ONE
     cubes_active = defaultdict(int)  # apparently faster
