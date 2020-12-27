@@ -24,10 +24,12 @@ import day21.main as day21
 import day22.main as day22
 import day23.main as day23
 import day24.main as day24
+import day25.main as day25
 
 if __name__ == '__main__':
     print("🎄 Advent of Code 2020 🎄")
-    for i in range(1, 25):
+    for i in range(1, 26):
         print("=== DAY {} ===".format(i))
         print("{} secs".format(
             timeit.timeit("day{}.solution()".format(i), setup="from __main__ import day{}".format(i), number=1)))
+    print("Running them all takes too long, but Merry Christmas!")
